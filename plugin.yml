@@ -1,0 +1,32 @@
+name: DevTools
+main: DevTools\DevTools
+version: 1.2
+api: [2.0.0, 3.0.0-ALPHA1, 3.0.0-ALPHA2, 3.0.0-ALPHA3, 3.0.0-ALPHA4, 3.0.0-ALPHA5]
+load: STARTUP
+author: TesseractResurrectedTeam
+description: Plugin and server development tools for Tesseract-Resurrected.
+permissions:
+ devtools:
+  default: op
+  description: "Allows using all the DevTools things"
+  children:
+   devtools.command:
+    default: op
+    description: "Allows use of all DevTools commands"
+    children:
+     devtools.command.extractphar:
+      default: op
+      description: "Allows extracting generic phar files"
+     devtools.command.extractplugin:
+      default: op
+      description: "Allows the extracting phar plugins"
+     devtools.command.loadplugin:
+      default: op
+      description: "Allows manual loading of plugins"
+     devtools.command.makeplugin:
+      default: op
+      description: "Allows the creation of phar plugins"
+     devtools.command.makeserver:
+      default: op
+      description: "Allows the creation of a server phar"
+
